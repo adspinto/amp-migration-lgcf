@@ -1,6 +1,3 @@
-const { config } = require("../../../config");
-const { execCLI } = require("../../../utils/exec");
+const { importCLI } = require("../../../utils/executeCLI");
 
-const clientConfig = ` --hubId ${config().lradev.hubId} --clientId ${config().lradev.appId} --clientSecret ${config().lradev.appSecret}`
-
-execCLI(`dc-cli content-type-schema import exportedContentSchema ${clientConfig}`)
+importCLI({ client: "lradev", toImport: "content-type-schema", name: "exported-content-schema" })

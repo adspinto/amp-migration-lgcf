@@ -1,5 +1,4 @@
-const { execCLI } = require("../../utils/exec");
-const { generateClient } = require("../../utils/generateClient");
+const { exportCLI } = require("../../utils/executeCLI");
 
 const schemaIds = [
     "https://therecordingacademy.com/content/hamburger-menu",
@@ -8,12 +7,4 @@ const schemaIds = [
     "https://musicares.org/content/global-navigation"
 ];
 
-const clientConfig = generateClient("traprod");
-
-let exportTRAPROD = `dc-cli content-type export exportedContentTypes ${clientConfig}`
-
-schemaIds.forEach(id => {
-    exportTRAPROD += ` --schemaId ${id}`
-});
-
-execCLI(exportTRAPROD);
+exportCLI({ schemaIds, client: "traprod", toExport: "content-type", name: "exported-content-types" })
