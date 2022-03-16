@@ -1,6 +1,6 @@
 
 const config = () => {
-    require('dotenv').config();
+
     return {
         musicaresdev: {
             appId: process.env.MUSICARES_APP_ID,

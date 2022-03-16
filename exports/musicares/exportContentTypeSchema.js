@@ -1,17 +1,36 @@
-const { generateClient } = require("../../utils/generateClient");
-const { execCLI } = require("../../utils/exec");
+const { exportCLI } = require("../../utils/executeCLI");
 
 const schemaIds = [
+    "https://therecordingacademy.com/slot/home-page",
+    "https://therecordingacademy.com/slot/home-hero-editorial-carousel",
+    "https://therecordingacademy.com/partial/meta-data",
+    "https://therecordingacademy.com/partial/navigation",
+    "https://therecordingacademy.com/partial/banner-content",
+    "https://therecordingacademy.com/partial/content",
+    "https://therecordingacademy.com/partial/legacy-vocabulary",
+    "https://therecordingacademy.com/slot/global-navigation",
+    "https://therecordingacademy.com/content/mission-statement",
+    "https://therecordingacademy.com/content/impact-media-carousel",
+    "https://therecordingacademy.com/content/impact-media-slide",
+    "https://therecordingacademy.com/content/program-banner",
+    "https://therecordingacademy.com/content/content-block",
+    "https://therecordingacademy.com/content/content-block-list",
+    "https://therecordingacademy.com/content/testimonial-carousel",
+    "https://therecordingacademy.com/content/partner-logo-slide",
+    "https://therecordingacademy.com/content/partner-logo-carousel",
+    "https://therecordingacademy.com/content/partner",
+    "https://therecordingacademy.com/content/newsletter-sign-up",
+    "https://therecordingacademy.com/content/addthis-social-sticky-nav",
+    "https://therecordingacademy.com/slot/global-footer",
     "https://therecordingacademy.com/content/global-footer-content",
     "https://therecordingacademy.com/content/global-footer-navigation",
-    "https://therecordingacademy.com/slot/global-footer",
+    "https://therecordingacademy.com/content/top-subnav",
+    "https://therecordingacademy.com/content/donation-widget",
+    "https://therecordingacademy.com/content/hero-slide",
+    "https://therecordingacademy.com/content/meta-data",
+    "https://therecordingacademy.com/content/hero-carousel-info-card",
+    "https://therecordingacademy.com/content/hero-carousel-info-cards",
+    "https://therecordingacademy.com/content/hero-carousel",
 ];
 
-const clientConfig = generateClient("musicaresdev");
-let exportTRAPRoD = `dc-cli content-type-schema export exportedGlobalHeader ${clientConfig}`
-
-schemaIds.forEach(id => {
-    exportTRAPRoD += ` --schemaId ${id}`
-});
-
-execCLI(exportTRAPRoD);
+exportCLI({ schemaIds, client: "musicaresdev", toExport: "content-type-schema", name: "musicares-exported-content-schemas" })
