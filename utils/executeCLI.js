@@ -9,7 +9,7 @@ const exportCLI = ({ schemaIds, client, toExport, name }) => {
     }
 
     //we have to sync content schema with content types always
-    let exp = `dc-cli ${toExport} export ${exportName} ${clientConfig} --sync`;
+    let exp = `dc-cli ${toExport} export ${exportName} ${clientConfig}`;
 
     schemaIds.forEach(id => {
         exp += ` --schemaId ${id}`
