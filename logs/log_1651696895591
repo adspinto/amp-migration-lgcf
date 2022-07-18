@@ -1,0 +1,25 @@
+// dc-cli 0.13.0 - ./log_1651696895591
+// === Exporting from source... ===
+// Retrieving content items, please wait.
+// Found 1 base folders.
+// Processing ...
+// Fetching additional folder: Global Header
+// Processing Hamburger...
+// Fetching additional folder: Hamburger
+// Processing Components...
+// Fetching additional folder: Components
+// Processing Subsribe Menu...
+// Fetching additional folder: Subsribe Menu
+// Scanning for dependancies.
+// Saving content items.
+// === Importing to destination... ===
+// Existing mapping loaded from 'C:\Users\Andre Pinto\.amplience\imports\folder-62586fc74cedfd00012d2335.json', changes will be saved back to it.
+// Scanning structure and content in 'C:\Users\Andre Pinto\.amplience\copy-1651696904331\' for repository 'Latin Grammy Cultural Foundation'...
+// Done. Validating content...
+// Found 0 dependancy levels in 0 items, 0 referencing a circular dependancy.
+// Importing 0 content items...
+// Creating circular dependants.
+// Resolving circular dependants.
+// Done!
+// === Done! ===
+SUCCESS

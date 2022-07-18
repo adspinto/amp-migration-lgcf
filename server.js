@@ -1,19 +1,33 @@
 require('dotenv').config();
-// tra
-// require("./exports/traprod/exportContentTypeSchema.js");
-// require("./exports/traprod/exportContentType.js");
-// require("./imports/lradev/traprod/importContentTypeSchema");
-// require("./imports/lradev/traprod/importContentType");
+
+require("./scripts/copyContentItemExample");
+// require("./scripts/importContentTypeSchema");
 
 
-// musicares
-// require("./exports/musicares/exportContentTypeSchema.js");
-// require("./exports/musicares/exportContentType.js");
-// require("./imports/lradev/musicares/importContentTypeSchema");
-require("./imports/lradev/musicares/importContentType");
 
-/**
- * import the script you want to run here, comment what you don't want to run.
- * There are some commands that need input so be aware of those.
- */
-// require("./imports/lradev/traprod/copyGlobalHeader");
+
+// require("./imports/lradev/traprod/archiveContentTypeSchemas");
+// require("./exports/exportContentTypeSchema.js");
+// const csv = require('csv-parser');
+// const fs = require('fs');
+
+// var objectToCSVRow = function(dataObject) {
+//     var dataArray = new Array;
+//     for (var o in dataObject) {
+//         var innerValue = dataObject[o]===null?'':dataObject[o].toString();
+//         var result = innerValue.replace(/"/g, '""');
+//         result = '"' + result + '"';
+//         dataArray.push(result);
+//     }
+//     return dataArray.join(' ') + '\r\n';
+// }
+
+
+// fs.createReadStream('data.csv')
+//   .pipe(csv())
+//   .on('data', (row) => {
+//     console.log(row);
+//   })
+//   .on('end', () => {
+//     console.log('CSV file successfully processed');
+//   });

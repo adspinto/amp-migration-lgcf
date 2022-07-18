@@ -5,8 +5,8 @@ import json
 import sys
 
 # assign directory
-DIRECTORY = 'files/exported-content-types-musicares' #sys.argv[1]
-AMP_REPOS = 'latingrammyculturalfoundation' #sys.argv[2]
+DIRECTORY = 'files/exported-content-types-production' #sys.argv[1]
+AMP_REPOS = ['latingrammyculturalfoundation'] #sys.argv[2]
 
 # iterate over files
 for filename in os.listdir(DIRECTORY):

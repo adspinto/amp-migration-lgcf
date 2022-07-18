@@ -1,22 +1,6 @@
 const { exportCLI } = require("../../utils/executeCLI");
 
 const schemaIds = [
-    // partials
-    "https://therecordingacademy.com/partial/meta-data",
-    "https://therecordingacademy.com/partial/navigation",
-    "https://therecordingacademy.com/partial/banner-content",
-    "https://therecordingacademy.com/partial/content",
-    "https://therecordingacademy.com/partial/legacy-vocabulary",
-    
-    // slots
-    "https://therecordingacademy.com/slot/content-page",
-    "https://therecordingacademy.com/slot/global-navigation",
-    "https://therecordingacademy.com/slot/home-page",
-    "https://therecordingacademy.com/slot/generic-page-content",
-    "https://therecordingacademy.com/slot/home-hero-editorial-carousel",
-    "https://therecordingacademy.com/slot/global-footer",
-
-    //content
     "https://therecordingacademy.com/content/meta-data",
     "https://therecordingacademy.com/content/news-article",
     "https://therecordingacademy.com/content/partner-logo-slide",
@@ -70,7 +54,22 @@ const schemaIds = [
     "https://therecordingacademy.com/content/accordion",
     "https://therecordingacademy.com/content/top-subnav",
     "https://therecordingacademy.com/content/global-footer-content",
-    "https://therecordingacademy.com/content/global-footer-navigation",    
+    "https://therecordingacademy.com/content/global-footer-navigation",
+    
+
+    //slots
+    "https://therecordingacademy.com/slot/content-page",
+    "https://therecordingacademy.com/slot/global-navigation",
+    "https://therecordingacademy.com/slot/home-page",
+    "https://therecordingacademy.com/slot/generic-page-content",
+    "https://therecordingacademy.com/slot/home-hero-editorial-carousel",
+    "https://therecordingacademy.com/slot/global-footer",
+    "https://therecordingacademy.com/slot/about-financial-information-page",
+    "https://therecordingacademy.com/slot/about-leadership-staff-page",
+    "https://therecordingacademy.com/slot/about-supporters-page",
+    "https://therecordingacademy.com/slot/content-slot",
+    "https://therecordingacademy.com/slot/get-help-page"
+
 ];
 
-exportCLI({ schemaIds, client: "musicaresdev", toExport: "content-type-schema", name: "exported-content-schemas-musicares" })
+exportCLI({ schemaIds, client: "lradev", toExport: "content-type", name: "exported-content-types" })

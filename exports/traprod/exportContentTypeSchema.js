@@ -1,6 +1,7 @@
 const { exportCLI } = require("../../utils/executeCLI");
+const { generateClient } = require("../../utils/generateClient");
 
-
+const clientConfig = generateClient("lradev");
 const schemaIds = [
     "https://therecordingacademy.com/content/hamburger-menu",
     "https://therecordingacademy.com/content/global-header",
@@ -21,6 +22,8 @@ const schemaIds = [
     "https://therecordingacademy.com/partial/video-embed-types",
 ];
 
-exportCLI({ schemaIds, client: "traprod", toExport: "content-type-schema", name: "exported-content-schema" })
+// 62549d114cedfd0001b8185b
+console.log(`dc-cli content-item export test-content-news --folderId 62549d114cedfd0001b8185b ${clientConfig}`);
+// exportCLI({ schemaIds, client: "traprod", toExport: "content-type-schema", name: "test-content-news" })
 
 

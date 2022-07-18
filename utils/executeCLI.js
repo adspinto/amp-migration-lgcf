@@ -28,7 +28,7 @@ const importCLI = ({ client, toImport, name }) => {
 
     let exp = `dc-cli ${toImport} import ${exportName} ${clientConfig}`;
     console.log(exp)
-    execCLI(exp);    
+    // execCLI(exp);    
 }
 
 
